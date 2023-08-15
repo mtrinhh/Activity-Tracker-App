@@ -10,10 +10,9 @@ import CreateUser from './components/CreateUser';
 
 function App() {
   return (
-    <div>
-      <Navbar />
       <div className="container">
-        <h1>It works!</h1>
+      <Navbar />
+      <br />
         <Routes>
           <Route path="/" element={<ActivitiesList />} />
           <Route path="/edit/:id" element={<EditActivity />} />
@@ -21,7 +20,6 @@ function App() {
           <Route path="/user" element={<CreateUser />} />
         </Routes>
       </div>
-    </div>
   );
 }
 
