@@ -39,7 +39,7 @@ function ActivitiesList() {
 
   return (
     <div>
-      <h3>Logged Activities</h3>
+      <h3>Activities</h3>
       <table className="table">
         <thead className="thead-light">
           <tr>
