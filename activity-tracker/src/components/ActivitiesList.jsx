@@ -20,7 +20,7 @@ function ActivitiesList() {
   const [activities, setActivities] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/activities/')
+    axios.get('/api/activities/')
       .then(response => {
         setActivities(response.data);
       })
@@ -30,7 +30,7 @@ function ActivitiesList() {
   }, []);
 
   const deleteActivity = id => {
-    axios.delete('http://localhost:3000/activities/' + id)
+    axios.delete('/api/activities/' + id)
       .then(response => {
         console.log(response.data);
         setActivities(activities.filter(el => el._id !== id));

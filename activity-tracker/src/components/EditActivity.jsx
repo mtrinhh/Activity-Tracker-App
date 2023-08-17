@@ -17,9 +17,9 @@ function EditActivity() {
     async function fetchData() {
       try {
         const activityResponse = await axios.get(
-          `http://localhost:3000/activities/${id}`
+          `/api/activities/${id}`
         );
-        const userResponse = await axios.get('http://localhost:3000/users/');
+        const userResponse = await axios.get('/api/users/');
 
         setUsername(activityResponse.data.username);
         setDescription(activityResponse.data.description);
@@ -63,7 +63,7 @@ function EditActivity() {
   
     try {
       const res = await axios.post(
-        `http://localhost:3000/activities/update/${id}`,
+        `/api/activities/update/${id}`,
         activity
       );
       console.log(res.data);

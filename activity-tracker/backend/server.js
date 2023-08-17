@@ -10,6 +10,8 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
+app.use(express.static('./../public'))
+
 const uri = process.env.MONGO_DB_CONNECTION_STRING;
 
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
@@ -22,8 +24,8 @@ connection.once('open', () => {
 const activitiesRouter = require('./routes/activities')
 const usersRouter = require('./routes/users')
 
-app.use('/activities', activitiesRouter)
-app.use('/users', usersRouter)
+app.use('/api/activities', activitiesRouter)
+app.use('/api/users', usersRouter)
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);

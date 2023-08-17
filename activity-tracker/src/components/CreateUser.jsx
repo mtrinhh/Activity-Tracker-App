@@ -19,14 +19,14 @@ function CreateUser() {
     console.log(user);
 
     try {
-      const existingUsers = await axios.get('http://localhost:3000/users/');
+      const existingUsers = await axios.get('/api/users');
       const isUserExists = existingUsers.data.some(u => u.username === user.username);
 
       if (isUserExists) {
         setMessage('User already exists!')
         console.log('User already exists!')
       } else {
-        const res = await axios.post('http://localhost:3000/users/add', user);
+        const res = await axios.post('/api/users/add', user);
         console.log(res.data);
         setMessage('User added!');
         console.log('User added!');

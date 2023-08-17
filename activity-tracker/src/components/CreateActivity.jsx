@@ -13,7 +13,7 @@ function CreateActivity() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await axios.get('http://localhost:3000/users/');
+        const response = await axios.get('/api/users/');
         if (response.data.length > 0) {
           setUsers(response.data.map(user => user.username));
           setUsername(response.data[0].username);
@@ -38,7 +38,7 @@ function CreateActivity() {
     console.log(activity);
 
     try {
-      const res = await axios.post('http://localhost:3000/activities/add', activity);
+      const res = await axios.post('/api/activities/add', activity);
       console.log(res.data);
       window.location = '/';
     } catch (error) {
