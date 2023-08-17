@@ -13,7 +13,6 @@ app.use(express.json());
 app.use(express.static('./../public'))
 
 const uri = process.env.MONGO_DB_CONNECTION_STRING;
-
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 const connection = mongoose.connection;
