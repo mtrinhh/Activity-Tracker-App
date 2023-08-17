@@ -1,6 +1,6 @@
 # Activity Tracker App
 
-The Activity Tracker App is a web application that allows users to track and manage their activities. Users can create new activities, edit existing ones, and manage users. The app is built using React for the frontend and Node.js with Express for the backend.
+The [Activity Tracker App](https://activity-tracker-app.onrender.com) is a web application that allows users to track and manage their activities. Users can create new activities, edit existing ones, and manage users. The app is built using React for the frontend and Node.js with Express for the backend.
 
 ## Features
 
